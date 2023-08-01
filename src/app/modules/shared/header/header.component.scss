@@ -1,0 +1,61 @@
+@use '/src/scss/base/' as *;
+
+.navbar {
+    background-color: $white;
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+
+    
+    // box-shadow: 0 2px 3px 0px $clr-secondary-light;
+    // @media(min-width:768px){
+    //     position: fixed;
+    //     width: 82%;
+    //     right: 0;
+    //     // left: 0;
+    //     z-index: 1;
+    // }
+    height: 8vh;
+    
+}
+.navbar-brand {
+    @media(max-width:400px) {
+        font-size: 0.8rem;
+    }
+}
+.navbar-collapse {
+    flex-basis: auto;
+}
+.navbar-expand-md .navbar-nav .dropdown-menu {
+    // position: absolute;
+    right: 0;
+    left: unset;
+    top: 120%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 248, 248, 0.95) 100%);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 1) inset;
+    width: max-content;
+    padding: 1rem;
+    p{
+        color: $txt-neutral;
+    }
+}
+.navbar-nav {
+    @media(max-width:768px) {
+        flex-direction: row;
+    }
+}
+.logo {
+    width: min(50%, 200px);
+}
+.dropdown-toggle::after {
+    margin-left: 0;
+}
+.dropdown-item {
+    white-space: unset;
+}
+@media (min-width: 576px) {
+    .dropdown-lg {
+        width: 320px;
+    }
+}
+.profile__icon {
+    width: 2rem;
+}

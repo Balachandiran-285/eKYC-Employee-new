@@ -1,0 +1,83 @@
+@use '/src/scss/base/' as *;
+$span2: span 2;
+
+.dashboard__card--top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 1rem 0 4rem 1rem;
+//     background: lightblue;
+//     background: linear-gradient(99.01deg, #329AD6 -3.57%, #1F578C 63%);
+    background: url(/assets/images/dashboard-top-card-bg.png) no-repeat 100%/cover;
+    color: #fff;
+//     background: rgb(238,250,230);
+// background: linear-gradient(90deg, rgba(238,250,230,1) 0%, rgba(213,241,192,1) 20%, rgba(154,221,104,1) 62%, rgba(154,221,104,1) 70%);
+    // z-index: -1;
+    img{
+        right: 17%;
+        top: 23%;
+    }
+}
+
+.dashboard__wrapper {
+    position: absolute;
+    top: 16vh;
+    left: 2%;
+    right: 2%;
+    // outline: 2px solid red;
+    &.d-md-grid {
+        grid-template-columns: repeat(6, 1fr);
+        // grid-template-rows: masonry;
+    }
+
+}
+
+article {
+    grid-column: $span2;
+    cursor: pointer;
+    transition: box-shadow 300ms ease;
+
+    &.dashboard__card,
+    &.chart {
+        background: rgba(226, 245, 252, 0.4);
+        box-shadow: 0 2px 10px 0 rgba(31, 38, 135, 0.37);
+        // box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(7px);
+        // -webkit-backdrop-filter: blur(7px);
+        // background-color: $clr-primary-light;
+        color: $clr-dark;
+        // neumorphism
+        // border-radius: 50px;
+        border-radius: 10px;
+        // background: linear-gradient(315deg, #99c0d6, #b6e4ff);
+        // background: #ebf7ff;
+        // box-shadow:  -14px -14px 24px #bcc6cc,
+        //              14px 14px 24px #fff;
+
+// background: #ebf7ff;
+// box-shadow: inset 7px 7px 14px #dbe6ed,
+//             inset -7px -7px 14px #fbffff;
+
+
+      
+        &:nth-child(6) {
+            grid-column: span 6;
+        }
+
+        @media(max-width: 768px) {
+            &+.dashboard__card {
+                margin-top: 1em;
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 3px 2px hsla($hue-dark, $saturation-dark, $lightness-dark, 0.5);
+    }
+}
+
+.chart {
+    grid-column: $span2;
+    grid-row: $span2;
+}

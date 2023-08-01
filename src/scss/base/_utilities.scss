@@ -1,0 +1,13 @@
+@use './colors' as *;
+
+.text-warning{
+    color: hsl(32, 95%, 44%)!important;
+
+}
+.text-success{
+    color: $clr-secondary!important
+}
+
+.text-primary{
+    color: $clr-primary;
+}

@@ -1,0 +1,15 @@
+@use '/src/scss/base/' as *;
+
+.button{
+    border-radius: 100px!important;
+    padding: 0.5em 2em;
+}
+.btn-primary{
+    background-color: $clr-primary;
+    border: none;
+    color: $white;
+}
+.btn-secondary{
+    border: 2px solid $clr-primary;
+    background-color: transparent;
+}

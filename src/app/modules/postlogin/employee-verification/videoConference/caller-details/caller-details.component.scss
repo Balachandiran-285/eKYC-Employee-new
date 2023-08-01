@@ -1,0 +1,11 @@
+@use '/src/scss/base/' as *;
+
+.icon{
+    width: 5rem;
+}
+
+.list-group-item.active{
+    background-color:transparent;
+    background:linear-gradient(180deg, #008DCF 0%, #0061B4 100%);
+    
+}

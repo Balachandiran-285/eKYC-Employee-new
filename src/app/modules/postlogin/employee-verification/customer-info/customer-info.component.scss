@@ -1,0 +1,79 @@
+@use '/src/scss/base/' as *;
+
+
+// details {
+//     &.details {
+//         &__basic {
+//             img {
+//                 width: 200px;
+//             }
+//         }
+//     }
+//     summary {
+//         font-size: 1.2rem;
+//     }
+//     // .content {
+//     //     border: 2px solid pink;
+//     // }
+//     // h5 {
+//     //     // &:not(:first-child) {
+//     //     //     margin-top: 2rem;
+//     //     // }
+//     // }
+// }
+small{
+    font-size: 0.8rem;
+    color: $txt-neutral;
+}
+.gradient_card{
+    background: linear-gradient(91.14deg, #BCE7FF 0.45%, #D0F3AC 50.98%);
+    border-radius: 5px;
+    &.details-basic{
+        
+        .d-flex{
+            flex: 0 1 20%;
+            // border: 1px solid;
+            &:nth-child(1){
+            flex: 0 1 30%;
+
+                // background: blue;
+            }
+        }
+    }
+}
+.details_section{
+    &::before{
+        position: absolute;
+        content: '';
+        /* background: red; */
+        height: 100%;
+        width: 100%;
+        display: block;
+        border: 2px solid $txt-neutral--200;
+        top: 14px;
+        padding-inline: 1rem;
+        left: 0;
+        border-radius: 5px;
+    }
+    &.basic{
+    }
+}
+.details_title{
+    background-color: $clr-primary-light;
+    border-radius: 100px;
+    border: 2px solid $clr-primary;
+    padding: 0.25em 0.75em;
+    width: max-content;
+}
+.btn-slot{
+    font-size: 0.9rem;
+    padding: 0.25em 0.5em;
+    @media(min-width:768px){
+        // width: min(7vw, 25%);
+        flex: 0 0 30%;
+    }
+    @media(min-width:991px){
+        // width: min(7vw, 25%);
+        flex: 0 0 20%;
+    }
+}

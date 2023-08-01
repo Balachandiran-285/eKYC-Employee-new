@@ -1,0 +1,24 @@
+<main class="d-grid align-items-center position-relative">
+    <div class="container">
+      <div class="row text-center align-items-center mx-5" >
+        <div class="col-lg-5 ms-auto">
+          <img class=" logo " src="assets/images/logos/Kiya-Logo.svg" alt="Kiya-Logo">
+        </div>
+      </div>
+      <select class="form-select position-absolute" aria-label="Default select example">
+        <option selected>English</option>
+        <option value="1">தமிழ்</option>
+        <option value="2">हिन्दी</option>
+        <option value="3">मराठी</option>
+      </select>
+        <div class="row align-items-center">
+          <div class="col-lg-5 d-none d-lg-block mx-auto">
+            <ng-content select=".main-left"></ng-content>
+          </div>
+          <div class="col-lg-4 mx-auto right-col--bg">
+            <ng-content select=".main"></ng-content>
+          </div>
+        </div>
+      </div>
+    </main>
+    

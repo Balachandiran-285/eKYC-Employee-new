@@ -1,0 +1,241 @@
+<app-header></app-header>
+
+<section class="video__call">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 min-vh-92 position-relative" style="background-color: #292929;">
+        <h4 class="text-center mt-3 text-light">Video Call component</h4>
+        <section class="row justify-content-between">
+          <div class="video_container position-relative">
+            <p class="video-description ">Local:</p>
+            <video src="" #local_video [autoplay]="true" [muted]="true"></video>
+          </div>
+          <div class="video_container position-relative">
+            <p class="video-description ">Remote:</p>
+            <video src="" #remote_video [autoplay]="true"></video>
+          </div>
+        </section>
+        <section class="row justify-content-end mt-3 me-1">
+          <button class="col-auto button btn-primary" (click)="startLocalVideo()">Start video call</button>
+          <button class="col-auto button btn-secondary text-light ms-3">Hangup</button>
+        </section>
+        
+      </div>
+      <div class="col-lg-4 px-0">
+        <ul class="nav nav-tabs justify-content-around pt-2" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="audit-tab" data-bs-toggle="tab" data-bs-target="#audit" type="button"
+              role="tab" aria-controls="audit" aria-selected="true">Audit</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+              role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="chat-tab" data-bs-toggle="tab" data-bs-target="#chat" type="button" role="tab"
+              aria-controls="chat" aria-selected="false">Chat</button>
+          </li>
+        </ul>
+        <div class="tab-content px-3" id="myTabContent">
+          <div class="tab-pane mt-2 fade active" id="audit" role="tabpanel" aria-labelledby="audit-tab">
+            Audit content
+          </div>
+          <div class="tab-pane mt-2 fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <!-- basic details tab accordian -->
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#basicDetails" aria-expanded="true" aria-controls="basicDetails">
+                    Basic Details
+                  </button>
+                </h2>
+                <div id="basicDetails" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Balachandiran <br>
+                    28/05/1989 <br>
+                    Male <br>
+                    9840166419 <br>
+                    balachandiran.b@kiya.ai
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- address details accordian -->
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#addressDetails" aria-expanded="true" aria-controls="addressDetails">
+                    Address Details
+                  </button>
+                </h2>
+                <div id="addressDetails" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    9/33, Jeevan Bhima Nagar,
+                        Anna Nagar West,
+                        Chennai, TN. PIN - 600 101
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- document details accordian -->
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#documentDetails" aria-expanded="true" aria-controls="addressDetails">
+                    document Details
+                  </button>
+                </h2>
+                <div id="documentDetails" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    docs
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- personal details accordian -->
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#personalDetails" aria-expanded="true" aria-controls="personalDetails">
+                    Personal Details
+                  </button>
+                </h2>
+                <div id="personalDetails" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Personal
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- account details accordian -->
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accountDetails" aria-expanded="true" aria-controls="accountDetails">
+                    Account Details
+                  </button>
+                </h2>
+                <div id="accountDetails" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Account
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="tab-pane mt-2 fade" id="chat" role="tabpanel" aria-labelledby="chat-tab">
+            <div class="chat-container">
+              <section class="chat-body" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+                <section class="chat-body--messages">
+                  <!-- cust msg -->
+                  <div class="d-flex cust__msg justify-content-end align-items-start mb-4 pt-1">
+                    <div>
+                      <p class="msg__bubble small p-2 mb-1 text-white">hello!</p>
+                      <p class="small mb-3 text-muted d-flex justify-content-end">10:30 a.m</p>
+                    </div>
+                    <img class="chat__avatar ms-2"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                      alt="chat avatar">
+                  </div>
+                  <!-- emp msg -->
+                  <div class="d-flex emp__msg justify-content-start align-items-start">
+                    <img class="chat__avatar me-2" src="/assets/images/logos/Kiya-Logo--icon.svg" alt="Kiya-Logo--icon">
+                    <div>
+                      <p class="msg__bubble small p-2 mb-1 text-white">hi customer, how may i help you</p>
+                      <p class="small mb-3 text-muted d-flex justify-content-end">10:31 a.m</p>
+                    </div>
+                  </div>
+                  <div class="d-flex cust__msg justify-content-end align-items-start mb-4 pt-1">
+                    <div>
+                      <p class="msg__bubble small p-2 mb-1 text-white">hello!</p>
+                      <p class="small mb-3 text-muted d-flex justify-content-end">10:30 a.m</p>
+                    </div>
+                    <img class="chat__avatar ms-2"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                      alt="chat avatar">
+                  </div>
+                  <!-- emp msg -->
+                  <div class="d-flex emp__msg justify-content-start align-items-start">
+                    <img class="chat__avatar me-2" src="/assets/images/logos/Kiya-Logo--icon.svg" alt="Kiya-Logo--icon">
+                    <div>
+                      <p class="msg__bubble small p-2 mb-1 text-white">hi customer, how may i help you</p>
+                      <p class="small mb-3 text-muted d-flex justify-content-end">10:31 a.m</p>
+                    </div>
+                  </div>
+                  <div class="d-flex cust__msg justify-content-end align-items-start mb-4 pt-1">
+                    <div>
+                      <p class="msg__bubble small p-2 mb-1 text-white">hello!</p>
+                      <p class="small mb-3 text-muted d-flex justify-content-end">10:30 a.m</p>
+                    </div>
+                    <img class="chat__avatar ms-2"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                      alt="chat avatar">
+                  </div>
+                  <!-- emp msg -->
+                  <div class="d-flex emp__msg justify-content-start align-items-start">
+                    <img class="chat__avatar me-2" src="/assets/images/logos/Kiya-Logo--icon.svg" alt="Kiya-Logo--icon">
+                    <div>
+                      <p class="msg__bubble small p-2 mb-1 text-white">hi customer, how may i help you</p>
+                      <p class="small mb-3 text-muted d-flex justify-content-end">10:31 a.m</p>
+                    </div>
+                  </div>
+                  <div class="d-flex cust__msg justify-content-end align-items-start mb-4 pt-1">
+                    <div>
+                      <p class="msg__bubble small p-2 mb-1 text-white">hello!</p>
+                      <p class="small mb-3 text-muted d-flex justify-content-end">10:30 a.m</p>
+                    </div>
+                    <img class="chat__avatar ms-2"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                      alt="chat avatar">
+                  </div>
+                  <!-- emp msg -->
+                  <div class="d-flex emp__msg justify-content-start align-items-start">
+                    <img class="chat__avatar me-2" src="/assets/images/logos/Kiya-Logo--icon.svg" alt="Kiya-Logo--icon">
+                    <div>
+                      <p class="msg__bubble small p-2 mb-1 text-white">hi customer, how may i help you</p>
+                      <p class="small mb-3 text-muted d-flex justify-content-end">10:31 a.m</p>
+                    </div>
+                  </div>
+                  <div class="d-flex cust__msg justify-content-end align-items-start mb-4 pt-1">
+                    <div>
+                      <p class="msg__bubble small p-2 mb-1 text-white">hello!</p>
+                      <p class="small mb-3 text-muted d-flex justify-content-end">10:30 a.m</p>
+                    </div>
+                    <img class="chat__avatar ms-2"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                      alt="chat avatar">
+                  </div>
+                  <!-- emp msg -->
+                  <div class="d-flex emp__msg justify-content-start align-items-start">
+                    <img class="chat__avatar me-2" src="/assets/images/logos/Kiya-Logo--icon.svg" alt="Kiya-Logo--icon">
+                    <div>
+                      <p class="msg__bubble small p-2 mb-1 text-white">hi customer, how may i help you</p>
+                      <p class="small mb-3 text-muted d-flex justify-content-end">10:31 a.m</p>
+                    </div>
+                  </div>
+                </section>
+              </section>
+              <section class="chat-footer text-muted d-flex align-items-center py-3">
+                <img class="chat__avatar" src="/assets/images/logos/Kiya-Logo--icon.svg" alt="Kiya-Logo--icon">
+                <form class="d-flex align-items-center w-100 position-relative">
+                  <input type="text" class="form-control" id="chat__input" placeholder="Enter your message"
+                     required>
+                  <!-- <small class="text-error position-absolute" >Type a msg to send</small> -->
+                  <a class="">
+                    <img class="send-icon" src="assets/images/icons/send.png" alt="send icon">
+                  </a>
+                </form>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

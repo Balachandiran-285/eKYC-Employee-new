@@ -1,0 +1,60 @@
+<div class="wrapper">
+    <app-header></app-header>
+    <section class="main__content d-lg-flex">
+      <button class="navbar-toggler navbar-toggler--aside d-md-none position-absolute" type="button" aria-controls="sidebarToggler"
+        aria-label="Toggle navigation" (click)="toggleSidebar()">
+        <img class=" icon " src="assets/images/logos/Kiya-Logo--icon.svg" alt="Kiya-Logo--icon">
+      </button>
+      <aside class="sidebarToggler" [ngClass]="{'active':isSidebarActive}">
+        <!-- <a href="#" class="aside__brand d-none d-md-block px-4">
+          <img class=" logo mx-auto" src="assets/images/logos/Kiya-Logo.svg" alt="Kiya-Logo">
+        </a> -->
+        <!-- <hr> -->
+        <div class="sidemenu">
+          <a class="sidemenu__link d-flex gap-3 px-4" (click)="goToDashboard()"[class.active]="isActive">
+            <img src="assets/images/icons/Dashboard-blue.svg" alt="">
+            <span>Dashboard</span>
+          </a>
+          <section class="accordion accordion-flush position-relative" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header mb-0" id="flush-headingOne">
+                <button class="accordion-button collapsed d-flex gap-3  px-4" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <img src="assets/images/icons/request-blue.svg" alt="">
+                  <span>Requests</span>
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <a class="accordion-body--link px-4 py-2 d-block active" (click)="goToUserVerification()">Unassigned Requests</a>
+                  <a class="accordion-body--link px-4 py-2 d-block" (click)="goToUserVerification()">Assigned Requests</a>
+                  <a class="accordion-body--link px-4 py-2 d-block" (click)="goToCallerDetails()">Scheduled Video Calls</a>
+                  <a class="accordion-body--link px-4 py-2 d-block" (click)="goToUserVerification()">Rejected Records</a>
+                  <a class="accordion-body--link px-4 py-2 d-block" (click)="goToUserVerification()">Completed Records</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <a class="sidemenu__link d-block d-flex gap-3 px-4">
+            <img src="assets/images/icons/settings-blue.svg" alt="">
+            <span>Settings</span>
+          </a>
+          <a class="sidemenu__link d-block d-flex gap-3 px-4">
+            <img src="assets/images/icons/help-blue.svg" alt="">
+            <span>Help</span>
+          </a>
+          <!-- <section class="sidebar__bottom">
+            <a class="sidemenu__link d-block d-flex gap-3 px-4" (click)="goToLogin()">
+              <img src="assets/images/icons/help-blue.svg" alt="">
+              <span>Logout</span>
+            </a>
+          </section> -->
+        </div>
+      </aside>
+      <main class="page__content px-4 py-4 position-relative">
+        <!-- page specific content -->
+        <ng-content select=".main"></ng-content>
+      </main>
+  </section>
+</div>

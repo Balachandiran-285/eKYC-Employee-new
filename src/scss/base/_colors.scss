@@ -1,0 +1,35 @@
+// primary colors
+$hue-primary: 202;
+$saturation-primary: 67%;
+$lightness-primary: 52%;
+
+$clr-primary: hsl($hue-primary, $saturation-primary, $lightness-primary);
+$clr-primary-light: hsl($hue-primary, $saturation-primary, 90%);
+
+// secondary colors
+$hue-secondary: 96;
+$saturation-secondary: 100%;
+$lightness-secondary: 41%;
+
+$clr-secondary: hsl($hue-secondary, $saturation-secondary, $lightness-secondary);
+$clr-secondary-light: hsl($hue-secondary, $saturation-secondary, 70%);
+
+$clr-light: hsl(196, 100%, 98%);
+$txt-dark: hsl(0, 0%, 22%);
+$txt-neutral: hsl(222, 10%, 46%);
+$txt-neutral--200: hsl(220, 13%, 91%);
+$txt-neutral--500: hsl(220, 9%, 46%);
+$txt-neutral--600: hsl(219, 10%, 34%);
+// rgba(107, 114, 128, 1)
+
+$clr-grey--300:hsl(216, 12%, 84%);
+// dark colors
+$hue-dark: 203;
+$saturation-dark: 63%;
+$lightness-dark: 17%;
+$clr-dark: hsl($hue-dark, $saturation-dark, $lightness-dark);
+
+
+$white: #fff;
+$accordian-btn-color:#fff;
+

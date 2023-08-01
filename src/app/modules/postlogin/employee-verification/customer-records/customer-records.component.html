@@ -1,0 +1,72 @@
+<app-main-layout>
+  <div class="main">
+    <!-- <app-breadcrumbs></app-breadcrumbs> -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#"class="text-primary text-decoration-none">Dasboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Requests assigned to me</li>
+      </ol>
+    </nav>
+    <main class="bg-white p-4">
+      <h5>Requests assigned to me</h5>
+      <section class="dateRange" *ngIf="myGroup">
+        <form [formGroup]="myGroup"class="d-flex gap-2 h-100 align-items-center">
+          <mat-form-field>
+            <mat-label>Start Date</mat-label>
+            <input matInput [matDatepicker]="startDatePicker" FormControl="startDate">
+            <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #startDatePicker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>End Date</mat-label>
+            <input matInput [matDatepicker]="endDatePicker" FormControl="endDate">
+            <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #endDatePicker></mat-datepicker>
+            <mat-error *ngIf="dateRangeForm.hasError('dateRangeError')">
+              End Date cannot be before Start Date.
+            </mat-error>
+          </mat-form-field>
+          <button class="button btn-primary">Submit</button>
+          <!-- <p>Selected range: {{range.value | json}}</p> -->
+        </form>
+      </section>
+      <section class="customerDataTable">
+        <mat-form-field class="my-4">
+          <mat-label>Filter</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+        </mat-form-field>
+        <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource" matSort>
+            <!-- ID Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+              <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+            </ng-container>
+            <!-- Progress Column -->
+            <ng-container matColumnDef="progress">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
+              <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+              <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+            </ng-container>
+            <!-- Fruit Column -->
+            <ng-container matColumnDef="fruit">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Fruit </th>
+              <td mat-cell *matCellDef="let row"> {{row.fruit}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"(click)="goToCustomerInfo()"></tr>
+            <!-- Row shown when there is no matching data. -->
+            <tr class="mat-row" *matNoDataRow>
+              <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+            </tr>
+          </table>
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+        </div>
+      </section>
+    </main>
+  </div>
+</app-main-layout>
