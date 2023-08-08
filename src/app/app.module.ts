@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
-import {DecimalPipe} from '@angular/common';
+import { DecimalPipe } from '@angular/common';
 import { RouterModule } from "@angular/router";
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
-import { SharedModule } from './modules/shared/shared.module';
+import { SharedModule } from './shared/shared.module';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { PreloginLayoutComponent } from './modules/layouts/prelogin-layout/prelogin-layout.component';
 import { MainLayoutComponent } from './modules/layouts/main-layout/main-layout.component';
@@ -17,7 +18,6 @@ import { CustomerRecordsComponent } from './modules/postlogin/employee-verificat
 import { CustomerInfoComponent } from './modules/postlogin/employee-verification/customer-info/customer-info.component';
 import { CallerDetailsComponent } from './modules/postlogin/employee-verification/videoConference/caller-details/caller-details.component';
 import { VideoCallComponent } from './modules/postlogin/employee-verification/videoConference/video-call/video-call.component';
-import {headerComponent} from './modules/shared/header/header.component';
 
 
 @NgModule({
@@ -31,8 +31,7 @@ import {headerComponent} from './modules/shared/header/header.component';
     VideoCallComponent,
     MainLayoutComponent,
     PreloginLayoutComponent,
-    headerComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -46,7 +45,7 @@ import {headerComponent} from './modules/shared/header/header.component';
     SharedModule,
 
   ],
-  exports:[SharedModule],
+  exports: [SharedModule],
 
   providers: [DecimalPipe],
   bootstrap: [AppComponent]

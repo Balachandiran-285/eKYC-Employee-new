@@ -1,25 +1,56 @@
 <app-header></app-header>
-
 <section class="video__call">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-8 min-vh-92 position-relative" style="background-color: #292929;">
-        <h4 class="text-center mt-3 text-light">Video Call component</h4>
-        <section class="row justify-content-between">
-          <div class="video_container position-relative">
-            <p class="video-description ">Local:</p>
-            <video src="" #local_video [autoplay]="true" [muted]="true"></video>
+      <div class="col-lg-8 min-vh-92">
+        <div class="" style="background-color: #ddd;">
+          <!-- <h4 class="text-center mt-3 text-light">Video Call component</h4> -->
+          <section class="position-relative mt-2">
+            <div class="video_container local position-absolute">
+              <p class="video-description ">Local:</p>
+              <video src="" #local_video [autoplay]="true" [muted]="true"></video>
+            </div>
+            <div class="video_container remote position-relative">
+              <p class="video-description ">Remote:</p>
+              <video src="" #remote_video [autoplay]="true"></video>
+            </div>
+          </section>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header mb-0 lh-lg" id="headingOne">
+                <button class="accordion-button py-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <strong>Name:&nbsp;</strong>Balachandiran
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body d-flex justify-content-between align-items-center py-0">
+                  <div class="col-2"><img class="w-75" src="/assets/images/Bala-selfie.png" alt="Bala-selfie"></div>
+                  <div class="">
+                    <p><strong>Gender:</strong> Male</p>
+                    <p class="mb-0"><strong>DOB:</strong> 28/05/1989</p>
+                  </div>
+                  <div class="">
+                    <p><strong>Mobile no.:</strong> 9840167444</p>
+                    <p class="mb-0"><strong>Email id:</strong> balachandiran.b@kiya.ai</p>
+                  </div>
+                  <div class="">
+                    <p><strong>Account no.:</strong> 282837489390</p>
+                    <p class="mb-0"><strong>PAN:</strong> CGZPB2674Q</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="video_container position-relative">
-            <p class="video-description ">Remote:</p>
-            <video src="" #remote_video [autoplay]="true"></video>
-          </div>
+        </div>
+        <section class="d-flex justify-content-center my-1">
+          <img class="icon" src="/assets/images/icons/start-recording.svg" alt="start-recording">
+          <img class="icon" src="/assets/images/icons/screenshot.svg" alt="screenshot">
+          <img class="icon" src="/assets/images/icons/mute.svg" alt="mute">
+          <img class="icon" src="/assets/images/icons/video-off.svg" alt="video-off">
+          <img class="icon" src="/assets/images/icons/hangup.svg" alt="hangup">
+          <!-- <button class="col-auto button btn-primary" (click)="startLocalVideo()">Start video call</button> -->
+          <!-- <button class="col-auto button btn-secondary text-light ms-3">Hangup</button> -->
         </section>
-        <section class="row justify-content-end mt-3 me-1">
-          <button class="col-auto button btn-primary" (click)="startLocalVideo()">Start video call</button>
-          <button class="col-auto button btn-secondary text-light ms-3">Hangup</button>
-        </section>
-        
       </div>
       <div class="col-lg-4 px-0">
         <ul class="nav nav-tabs justify-content-around pt-2" id="myTab" role="tablist">
@@ -45,7 +76,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#basicDetails" aria-expanded="true" aria-controls="basicDetails">
+                  <button class="accordion-button py-0" type="button" data-bs-toggle="collapse" data-bs-target="#basicDetails" aria-expanded="true" aria-controls="basicDetails">
                     Basic Details
                   </button>
                 </h2>
@@ -59,13 +90,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
             <!-- address details accordian -->
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#addressDetails" aria-expanded="true" aria-controls="addressDetails">
+                  <button class="accordion-button py-0" type="button" data-bs-toggle="collapse" data-bs-target="#addressDetails" aria-expanded="true" aria-controls="addressDetails">
                     Address Details
                   </button>
                 </h2>
@@ -77,13 +107,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
             <!-- document details accordian -->
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#documentDetails" aria-expanded="true" aria-controls="addressDetails">
+                  <button class="accordion-button py-0" type="button" data-bs-toggle="collapse" data-bs-target="#documentDetails" aria-expanded="true" aria-controls="addressDetails">
                     document Details
                   </button>
                 </h2>
@@ -93,13 +122,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
             <!-- personal details accordian -->
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#personalDetails" aria-expanded="true" aria-controls="personalDetails">
+                  <button class="accordion-button py-0" type="button" data-bs-toggle="collapse" data-bs-target="#personalDetails" aria-expanded="true" aria-controls="personalDetails">
                     Personal Details
                   </button>
                 </h2>
@@ -109,13 +137,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
             <!-- account details accordian -->
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accountDetails" aria-expanded="true" aria-controls="accountDetails">
+                  <button class="accordion-button py-0" type="button" data-bs-toggle="collapse" data-bs-target="#accountDetails" aria-expanded="true" aria-controls="accountDetails">
                     Account Details
                   </button>
                 </h2>
@@ -125,7 +152,6 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
           <div class="tab-pane mt-2 fade" id="chat" role="tabpanel" aria-labelledby="chat-tab">
@@ -235,7 +261,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>

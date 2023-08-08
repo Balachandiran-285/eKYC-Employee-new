@@ -94,7 +94,20 @@ input {
 // video call styles
 
 .video_container{
-	flex: 0 1 50%;
+	// flex: 0 1 50%;
+	&.local{
+		left: 2%;
+		bottom: 2%;
+		z-index: 1;
+		width: 180px;
+		align-self: 2/1;
+		border: 1px solid $clr-primary;
+	}
+	&.remote{
+		video{
+			height: 60vh;
+		}
+	}
 	.video-description{
 		position: absolute;
 		top: 0;
@@ -103,7 +116,16 @@ input {
 	}
 	video{
 		width: 100%;
-		background-color: #ddd;
+		display: block;
+		// background-color: #ddd;
 
 	}
+}
+.icon{
+	display: unset;
+	width: 50px;
+	filter: drop-shadow(0 0 3px hsla(0, 0%, 25%, 0.758));
+}
+.accordion-body p{
+	font-size: 0.9rem;
 }

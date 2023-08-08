@@ -1,6 +1,12 @@
-import { NgModule } from "@angular/core";
-import { CommonModule, NgIf, JsonPipe } from "@angular/common";
-// import { RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { SharedRoutingModule } from './shared-routing.module';
+import { headerComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+
+// MATERIAL
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -33,24 +39,19 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatNativeDateModule } from "@angular/material/core";
-// import { headerComponent } from './header/header.component';
-import { FooterComponent } from "./footer/footer.component";
-import { ConfirmationModalComponent } from './confirmation-modal/confirmation-modal.component';
+import { ConfirmationModalComponent } from './components/confirmation-modal/confirmation-modal.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
-
-// import { from } from "rxjs";
-
 
 @NgModule({
   declarations: [
-    // headerComponent,
+    headerComponent,
     FooterComponent,
     ConfirmationModalComponent,
     BreadcrumbsComponent,
-  
   ],
   imports: [
     CommonModule,
+    SharedRoutingModule,
     MatCheckboxModule,
     MatCheckboxModule,
     MatButtonModule,
@@ -84,37 +85,45 @@ import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.compo
     MatSortModule,
     MatPaginatorModule,
     MatNativeDateModule,
-    // RouterModule.forChild([])
   ],
   exports: [
-    MatButtonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatBadgeModule,
-    MatListModule,
-    MatGridListModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatRadioModule,
-    MatDatepickerModule,
-    MatChipsModule,
-    MatTooltipModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatNativeDateModule,
-    NgIf,
-    JsonPipe,
-  ],
-  providers: [
-    // headerComponent,
+    headerComponent,
     FooterComponent,
     ConfirmationModalComponent,
     BreadcrumbsComponent,
-    MatDatepickerModule, MatTableModule, MatSortModule, MatPaginatorModule,
-    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } }
+    MatCheckboxModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatBadgeModule,
+    MatToolbarModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatStepperModule,
+    MatTabsModule,
+    MatExpansionModule,
+    MatButtonToggleModule,
+    MatChipsModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatDialogModule,
+    MatTooltipModule,
+    MatSnackBarModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatNativeDateModule,
   ]
 })
 export class SharedModule { }
-
