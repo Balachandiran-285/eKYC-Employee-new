@@ -34,7 +34,10 @@ export class DashboardComponent implements OnInit {
         width: 400
       },
       legend: {
-        position: "right center"
+        position: "bottom",
+      },
+      dataLabels: {
+        enabled: false,
       },
       labels: ["Unassigned", "Assigned", "Completed", "Rejected", "Scheduled calls"],
       responsive: [
@@ -42,8 +45,8 @@ export class DashboardComponent implements OnInit {
           breakpoint: 1000,
           options: {
             chart: {
-              height: 300,
-              width:300
+              // height: 300,
+              width:200
             },
             legend: {
               position: "bottom"

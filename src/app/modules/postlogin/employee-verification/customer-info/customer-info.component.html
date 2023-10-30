@@ -1,287 +1,304 @@
 <app-main-layout>
     <div class="main">
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#"class="text-primary text-decoration-none">Dasboard</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Requests assigned to me</li>
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a class="text-primary text-decoration-none" (click)="goToDashboard()">Dasboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Requests assigned - me</li>
             </ol>
-          </nav>
-        <div class="bg-white p-4">
-            <h3 class="mb-3">User Verification</h3>
-            <hr>
-            <section class="gradient_card details-basic d-lg-flex px-5 py-2">
-                <div class="d-flex gap-3 align-items-center">
-                    <img src="assets/images/Profile-Picture.svg" alt="Profile-picture">
-                    <h3 class="mb-0">Balachandiran B</h3>
-                </div>
-                <div class="d-flex gap-3 align-items-center">
-                    <img src="assets/images/icons/date-icon.svg" alt="date-icon">
-                    <span>
-                        <small>Date of birth</small>
-                        <p class="mb-0">28/05/1989</p>
-                    </span>
-                </div>
-                <div class="d-flex gap-3 align-items-center">
-                    <img src="assets/images/icons/gender-icon.svg" alt="date-icon">
-                    <span>
-                        <small>Gender</small>
-                        <p class="mb-0">Male</p>
-                    </span>
-                </div>
-                <div class="d-flex gap-3 align-items-center">
-                    <img src="assets/images/icons/mobile-icon.svg" alt="date-icon">
-                    <span>
-                        <small>Mobile number</small>
-                        <p class="mb-0">9840166419</p>
-                    </span>
-                </div>
-                <div class="d-flex gap-3 align-items-center">
-                    <img src="assets/images/icons/email-icon.svg" alt="date-icon">
-                    <span>
-                        <small>Email id</small>
-                        <p class="mb-0">balachandiran.b@kiya.ai</p>
-                    </span>
-                </div>
-            </section>
-            <!-- details_section basic -->
-            <section class="details_section position-relative mt-3 ps-3">
-                <h4 class="details_title text-center text-primary position-relative">Basic details</h4>
-                <article class="row justify-content-lg-between my-3">
-                    <!-- <div class="col-lg-4">
-                        <img class=" my-2" src="/assets/images/male-blue.png" alt="">
-                    </div> -->
-                    <div class="col-lg-4">
-                        <small>Name as per PAN</small>
-                        <p>Balachandiran B</p>
-                        <small>Name as per Aadhar</small>
-                        <p>Balachandiran B</p>
+        </nav>
+        <div class="bg-white">
+            <h4 class="mb-0 main-title">User Verification</h4>
+            <div class="px-4 pb-4">
+                <section class="details_section row gap-3">
+                    <figure class="col-md-1">
+                        <img class="rounded-circle" src="assets/images/Bala-selfie.png" alt="Profile-picture">
+                        <!-- <figcaption class="mb-1 text-center"><strong>Balachandiran B</strong></figcaption> -->
+                    </figure>
+                    <div class="col-sm-3 col-md-auto d-flex gap-3 align-items-center">
+                        <span>
+                            <p class="info-heading mb-0">Name</p>
+                            <p class="info-body mb-0">Balachandiran B</p>
+                        </span>
                     </div>
-                    <div class="col-lg-4">
-                        <small>Mother’s name</small>
-                        <p>Sumathi B</p>
-                        <small>Father’s name</small>
-                        <p>Balasubramanian R</p>
+                    <div class="col-sm-3 col-md-auto d-flex gap-3 align-items-center">
+                        <img src="assets/images/icons/date-icon.svg" alt="date-icon">
+                        <span>
+                            <p class="info-heading mb-0">Date of birth</p>
+                            <p class="info-body mb-0">28/05/1989</p>
+                        </span>
                     </div>
-                    <div class="col-lg-4">
-                        <small>Dependents</small>
-                        <p>2</p>
-                        <small>Religion</small>
-                        <p>Hindu</p>
+                    <div class="col-sm-3 col-md-auto d-flex gap-3 align-items-center">
+                        <img src="assets/images/icons/gender-icon.svg" alt="date-icon">
+                        <span>
+                            <p class="info-heading mb-0">Gender</p>
+                            <p class="info-body mb-0">Male</p>
+                        </span>
                     </div>
-                </article>
-            </section>
-            <!-- details_section career -->
-
-            <section class="details_section position-relative mt-5 ps-3">
-                <h4 class="details_title text-center text-primary position-relative">Career details</h4>
-                <article class="row justify-content-lg-between my-3">
-                    <div class="col-lg-4">
-                        <small>Education</small>
-                        <p>Graduate</p>
-                        <small>Occupation</small>
-                        <p>Salaried</p>
-                        <small>Annual income</small>
-                        <p>>5,00,000</p>
+                    <div class="col-sm-3 col-md-auto d-flex gap-3 align-items-center">
+                        <img src="assets/images/icons/mobile-icon.svg" alt="date-icon">
+                        <span>
+                            <p class="info-heading mb-0">Mobile number</p>
+                            <p class="info-body mb-0">9840166419</p>
+                        </span>
                     </div>
-                    <div class="col-lg-4">
-                        <small>Employer name</small>
-                        <p>Kiya.ai</p>
-                        <small>Employer contact no.</small>
-                        <p>044 4051 8888</p>
+                    <div class="col-sm-3 col-md-auto d-flex gap-3 align-items-center">
+                        <img src="assets/images/icons/email-icon.svg" alt="date-icon">
+                        <span>
+                            <p class="info-heading mb-0">Email id</p>
+                            <p class="info-body">balachandiran.b@kiya.ai</p>
+                        </span>
                     </div>
-                    <div class="col-lg-4">
-                        <small>Employer key person</small>
-                        <p>Pravin</p>
-                        <small>Key person contact no.</small>
-                        <p>9820271773</p>
-                    </div>
-                </article>
-            </section>
-            <!-- details_section Account -->
-            <section class="details_section position-relative mt-5 ps-3">
-                <h4 class="details_title text-center text-primary position-relative">Account details</h4>
-                <article class="row justify-content-lg-between my-3">
-                    <div class="col-lg-4">
-                        <small>Customer ID</small>
-                        <p>00000028282829101</p>
-                        <small>Account number</small>
-                        <p>6803902902</p>
-                        <small>Account type</small>
-                        <p>Savings (V-CIP)</p>
-                        
-                    </div>
-
-                    <div class="col-lg-4">
-                        <small>Branch</small>
-                        <p>Chennai- Anna Nagar</p>
-                        <small>Latitude/Longitude (City)</small>
-                        <p>13.0827° N, 80.2707° E (Chennai)</p>
-                        <small>Time stamp</small>
-                        <p>28-04-2023, 09:06:23 am</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <small>PAN</small>
-                        <p>CGZPB2674Q</p>
-                        <a href="" class="pe-2">view doc</a>
-                        <small>Aadhar (Aadhar EKYC Verified)</small>
-                        <p>xxxxxxxx7878</p>
-                        <a href="">view customer photo</a>
-                        
-                    </div>
-                    
-                </article>
-            </section>
-            <!-- details_section address -->
-            <section class="details_section position-relative mt-5 ps-3">
-                <h4 class="details_title text-center text-primary position-relative">Address details</h4>
-                <article class="row my-3">
-                    <div class="col-lg-4">
-                        <small>Present address (EKYC Verified)</small>
-                        <p>9/33, Jeevan Bhima Nagar,
-                            Anna Nagar West,
-                            Chennai, TN. PIN - 600 101</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <small>Mailing address</small>
-                        <p>9/33, Jeevan Bhima Nagar,
-                            Anna Nagar West,
-                            Chennai, TN. PIN - 600 101</p>
-                    </div>
-                </article>
-            </section>
-            <!-- details_section Guardian -->
-            <section class="details_section position-relative mt-5 ps-3">
-                <h4 class="details_title text-center text-primary position-relative">Guardian details</h4>
-                <article class="row my-3">
-                    <div class="col-lg-4">
-                        <small>Guardian Name</small>
-                        <p>Sagar Kumar</p>
-                        <small>Guardian Relation</small>
-                        <p>Father</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <small>Guardian location</small>
-                        <p>Chennai.</p>
-                        <small>Guardian Type</small>
-                        <p>Permanent</p>
-                    </div>
-                </article>
-            </section>
-            <!-- Nominee details -->
-            <section class="details_section position-relative mt-5 ps-3">
-                <h4 class="details_title text-center text-primary position-relative">Nominee details</h4>
-                <article class="row  my-3">
-                    <div class="col-lg-4">
-                        <small>Nominee Name</small>
-                        <p>Sagar Kumar</p>
-                        <small>Nominee Age</small>
-                        <p>25</p>
-                        
-                    </div>
-                    <div class="col-lg-4">
-                        <small>Nominee Relationship</small>
-                        <p>Son</p>
-                        <small>Nominee Address</small>
-                        <p>9/33, Jeevan Bhima Nagar,
-                            Anna Nagar West,
-                            Chennai, TN. PIN - 600 101</p>
-                    </div>
-                </article>
-            </section>
-            <section class="row justify-content-between">
-                <!-- Selfie  authentication details -->
-                <section class="details_section position-relative mt-5 ms-3 col-lg-4">
-                    <h4 class="details_title text-center text-primary position-relative">Selfie  authentication details</h4>
-                    <img src="/assets/images/Bala-selfie.png" alt="Bala-selfie">
-                    <!-- <section class="content row px-5 my-3">
-                        <div class="col-lg-4 col-lg-auto">
-                        </div>
-                    </section> -->
                 </section>
-                <!-- Signature details -->
-                <section class="details_section position-relative mt-5 me-3 col-lg-7">
-                    <h4 class="details_title text-center text-primary position-relative">Signature details</h4>
-                    <section class="content row px-5 my-3">
-                        <div class="col-lg-6">
-                            <img src="/assets/images/Bala-signature.png" alt="Bala-selfie">
-                            <p>Customer signature</p>
-                        </div>
-                        <div class="col-lg-6">
-                            <img src="/assets/images/Bala-selfie.png" alt="Bala-selfie">
-                            <p>VCIP</p>
-                        </div>
-                    </section>
-                </section>
-            </section>
-            <!-- verification section -->
-            <section class="row mt-5">
-                <div class="col-lg-6">
-                    <div class="d-flex gap-3 align-items-center">
-                        <h4 class="mb-0 col-lg-6">Verification completed</h4><a href="">Checklist</a>
-                    </div>
-                    <div class="d-flex gap-3 align-items-center mt-2">
-                        <h4 class="mb-0 col-lg-6">New customer</h4><a href="">View details</a>
-                    </div>
-                    <div class="d-flex gap-3 align-items-center mt-2">
-                        <h4 class="mb-0 col-lg-6">Welcome letter</h4><a href="">View & print</a>
-                    </div>
-                    <div class="d-flex gap-3 align-items-center mt-2">
-                        <h4 class="mb-0 col-lg-6">Customer profile form</h4><a href="">Download</a>
-                    </div>
-                    <div class="d-flex gap-3 align-items-center mt-2">
-                        <h4 class="mb-0 col-lg-6">Video call</h4><a href="">Schedule meeting</a>
-                    </div>
-                    <!-- <div class="mt-4"> -->
-                          
-                          <!-- <div class="col-auto form-floating pl-0">
-                            <input type="date" class="form-control" name="date" id="date" placeholder="">
-                            <label for="date">Start date</label>
-                            <span class="date_icon">📅</span>
+                <!-- details_section basic -->
+                <section class="details_section mt-4">
+                    <h5 class="details_title text-primary mb-4">Basic details</h5>
+                    <div class="row column-gap-5">
+                        <!-- <div class="col-lg-4">
+                            <img class=" my-2" src="/assets/images/male-blue.png" alt="">
                         </div> -->
-                    <!-- </div> -->
-                </div>
-                <div class="col-lg-6">
-                    <!-- slots section -->
-                    <mat-form-field>
-                        <mat-label>Choose a date</mat-label>
-                        <input matInput [matDatepicker]="picker">
-                        <mat-hint>MM/DD/YYYY</mat-hint>
-                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Name as per PAN</p>
+                            <p class="info-body">Balachandiran B</p>
+                            <p class="info-heading mb-0">Name as per Aadhar</p>
+                            <p class="info-body">Balachandiran B</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Mother’s name</p>
+                            <p class="info-body">Sumathi B</p>
+                            <p class="info-heading mb-0">Father’s name</p>
+                            <p class="info-body">Balasubramanian R</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Dependents</p>
+                            <p class="info-body ">2</p>
+                            <p class="info-heading mb-0">Religion</p>
+                            <p class="info-body">Hindu</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- details_section career -->
+                <section class="details_section mt-4">
+                    <h5 class="details_title text-primary mb-4">Career details</h5>
+                    <div class="row column-gap-5">
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Education</p>
+                            <p class="info-body">Graduate</p>
+                            <p class="info-heading mb-0">Occupation</p>
+                            <p class="info-body">Salaried</p>
+                            <p class="info-heading mb-0">Annual income</p>
+                            <p class="info-body">>5,00,000</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Employer name</p>
+                            <p class="info-body">Kiya.ai</p>
+                            <p class="info-heading mb-0">Employer contact no.</p>
+                            <p class="info-body">044 4051 8888</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Employer key person</p>
+                            <p class="info-body">Pravin</p>
+                            <p class="info-heading mb-0">Key person contact no.</p>
+                            <p class="info-body">9820271773</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- details_section Account -->
+                <section class="details_section pb-3 mt-4">
+                    <h5 class="details_title text-primary mb-4">Account details</h5>
+                    <div class="row column-gap-5">
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Customer ID</p>
+                            <p class="info-body">00000028282829101</p>
+                            <p class="info-heading mb-0">Account number</p>
+                            <p class="info-body">6803902902</p>
+                            <p class="info-heading mb-0">Account type</p>
+                            <p class="info-body">Savings (V-CIP)</p>
+
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Branch</p>
+                            <p class="info-body">Chennai- Anna Nagar</p>
+                            <p class="info-heading mb-0">Latitude/Longitude (City)</p>
+                            <p class="info-body">13.0827° N, 80.2707° E (Chennai)</p>
+                            <p class="info-heading mb-0">Time stamp</p>
+                            <p class="info-body">28-04-2023, 09:06:23 am</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">PAN</p>
+                            <p class="info-body">CGZPB2674Q</p>
+                            <a href="" class="pe-2">view doc</a>
+                            <p class="info-heading mb-0">Aadhar (Aadhar EKYC Verified)</p>
+                            <p class="info-body">xxxxxxxx7878</p>
+                            <a href="">view customer photo</a>
+
+                        </div>
+
+                    </div>
+                </section>
+                <!-- details_section address -->
+                <section class="details_section mt-4">
+                    <h5 class="details_title text-primary mb-4">Address details</h5>
+                    <div class="row column-gap-5">
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Present address (EKYC Verified)</p>
+                            <p class="info-body">9/33, Jeevan Bhima Nagar,
+                                Anna Nagar West,
+                                Chennai, TN. PIN - 600 101</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Mailing address</p>
+                            <p class="info-body">9/33, Jeevan Bhima Nagar,
+                                Anna Nagar West,
+                                Chennai, TN. PIN - 600 101</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- details_section Guardian -->
+                <section class="details_section mt-4">
+                    <h5 class="details_title text-primary mb-4">Guardian details</h5>
+                    <div class="row column-gap-5">
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Guardian Name</p>
+                            <p class="info-body">Sagar Kumar</p>
+                            <p class="info-heading mb-0">Guardian Relation</p>
+                            <p class="info-body">Father</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Guardian location</p>
+                            <p class="info-body">Chennai.</p>
+                            <p class="info-heading mb-0">Guardian Type</p>
+                            <p class="info-body">Permanent</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Nominee details -->
+                <section class="details_section mt-4">
+                    <h5 class="details_title text-primary mb-4">Nominee details</h5>
+                    <div class="row column-gap-5">
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Nominee Name</p>
+                            <p class="info-body">Sagar Kumar</p>
+                            <p class="info-heading mb-0">Nominee Age</p>
+                            <p class="info-body">25</p>
+
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="info-heading mb-0">Nominee Relationship</p>
+                            <p class="info-body">Son</p>
+                            <p class="info-heading mb-0">Nominee Address</p>
+                            <p class="info-body">9/33, Jeevan Bhima Nagar,
+                                Anna Nagar West,
+                                Chennai, TN. PIN - 600 101</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- selfie and signature details -->
+                <section class="details_section row column-gap-5 row-gap-3 mt-4">
+                    <!-- Selfie  authentication details -->
+                    <div class="col-md-3">
+                        <h5 class="details_title text-primary mb-1 mb-md-4">Selfie authentication details</h5>
+                        <img src="/assets/images/Bala-selfie.png" alt="Bala-selfie">
+                        <!-- <section class="content row px-5 my-3">
+                            <div class="col-lg-4 col-lg-auto">
+                            </div>
+                        </section> -->
+                    </div>
+                    <!-- Signature details -->
+                    <div class="col-md-8">
+                        <h5 class="details_title text-primary mb-1 mb-md-4 mt-3 mt-md-0">Signature details</h5>
+                        <div class="content row gap-3 my-3">
+                            <div class="col-lg-5">
+                                <h6 class="">Customer signature</h6>
+                                <img class="border border-primary" src="/assets/images/Bala-signature.png" alt="Bala-selfie">
+                            </div>
+                            <div class="col-lg-5 mt-4 mt-md-0">
+                                <h6 class="">VCIP</h6>
+                                <img src="/assets/images/Bala-selfie.png" alt="Bala-selfie">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- verification and slot section -->
+                <section class="row column-gap-5 row-gap-3 mt-4">
+                    <!-- Verification details -->
+                    <div class="col-lg-3">
+                        <h5 class="details_title text-primary mb-4">Verification details</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="mb-0 col-auto">Verification completed</p><a href="">Checklist</a>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <p class="mb-0 col-auto">New customer</p><a href="">View details</a>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <p class="mb-0 col-auto">Welcome letter</p><a href="">View & print</a>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <p class="mb-0 col-auto">Customer profile form</p><a href="">Download</a>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <p class="mb-0 col-auto">Video call</p><a href="">Schedule meeting</a>
+                        </div>
+                    </div>
+                    <!-- Appointment for video call -->
+                    <div class="col-lg-8">
+                        <h5 class="details_title text-primary mb-4">Appointment for video call</h5>
+                          <!-- slots section -->
+                          <div class="d-flex ">
+                            <mat-form-field appearance="outline"class="custom-form-stretch-50">
+                                <mat-label>Apppointment date</mat-label>
+                                <input matInput required [matDatepicker]="picker" placeholder="Choose appointment date">
+                                <mat-hint>MM/DD/YYYY</mat-hint>
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="row row-gap-3 mt-3">
+                            <div class="col-sm-4">
+                                <button mat-stroked-button color="secondary" class="btn-slot">03:15 PM - 03:30 PM</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button mat-stroked-button color="secondary" class="btn-slot">03:15 PM - 03:30 PM</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button mat-stroked-button color="secondary" class="btn-slot">03:15 PM - 03:30 PM</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button mat-stroked-button color="secondary" class="btn-slot">03:15 PM - 03:30 PM</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button mat-stroked-button color="secondary" class="btn-slot">03:15 PM - 03:30 PM</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button mat-stroked-button color="secondary" class="btn-slot">03:15 PM - 03:30 PM</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button mat-stroked-button color="secondary" class="btn-slot">03:15 PM - 03:30 PM</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button mat-stroked-button color="secondary" class="btn-slot">03:15 PM - 03:30 PM</button>
+                            </div>
+                            
+
+                        </div>
+                        <div class="d-flex ">
+                            <p class="mt-3"><strong>Selected slot is:</strong></p>
+                        </div>
+                    </div>
+                </section>
+               
+                <!-- comments section -->
+                <section class="mt-4 pe-3">
+                    <mat-form-field appearance="outline">
+                        <mat-label>You can add comments before you onboard/reject</mat-label>
+                        <textarea matInput placeholder="Enter comments">1600 Amphitheatre Pkwy</textarea>
                       </mat-form-field>
-                      
-                    <p class="mt-2">Select a slot</p>
-                    <div class="row gap-3 justify-content-between mt-4 mx-0">
-                        <button class="button btn-secondary btn-slot">19:15-19:30</button>
-                        <button class="button btn-secondary btn-slot">19:15-19:30</button>
-                        <button class="button btn-secondary btn-slot">19:15-19:30</button>
-                        <button class="button btn-secondary btn-slot">19:15-19:30</button>
-                        <button class="button btn-secondary btn-slot">19:15-19:30</button>
-                        <button class="button btn-secondary btn-slot">19:15-19:30</button>
-                        <button class="button btn-secondary btn-slot">19:15-19:30</button>
-                        <button class="button btn-secondary btn-slot">19:15-19:30</button>
-                        <button class="button btn-secondary btn-slot">19:15-19:30</button>
-                        <button class="button btn-secondary btn-slot">19:15-19:30</button>
-                        <button class="button btn-secondary btn-slot">19:15-19:30</button>
-                        <button class="button btn-secondary btn-slot">19:15-19:30</button>
-                      
-                    </div>
-                </div>
-            </section>
-            <section class="row mt-4 mx-0">
-                <div class="col-lg-12">
-                    <div class="col-auto">
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Comments" id="floatingTextarea"></textarea>
-                            <label for="floatingTextarea">You can add comments before you onboard/reject </label>
-                          </div>
-                    </div>
-                </div>
-            </section>
-            <section class="row mx-0 mt-5 justify-content-end gap-4">
-                <button class="col-auto  button btn-secondary">Reject</button>
-                <button class="col-auto  button btn-primary">Accept</button>
-            </section>
+                </section>
+                <section class="d-flex mx-0 my-5 justify-content-end gap-4">
+                    <button mat-stroked-button color="secondary" >Reject</button>
+                    <button mat-raised-button color="primary" >Accept</button>
+                </section>
+            </div>
         </div>
     </div>
 </app-main-layout>

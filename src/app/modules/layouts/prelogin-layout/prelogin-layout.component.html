@@ -1,24 +1,28 @@
-<main class="d-grid align-items-center position-relative">
-    <div class="container">
-      <div class="row text-center align-items-center mx-5" >
-        <div class="col-lg-5 ms-auto">
-          <img class=" logo " src="assets/images/logos/Kiya-Logo.svg" alt="Kiya-Logo">
-        </div>
+<main class="d-flex align-items-center">
+  <section class=" position-absolute lang_section">
+      <mat-form-field appearance="outline">
+        <mat-label>Select Language</mat-label>
+        <mat-select>
+          <mat-option value="option1">English</mat-option>
+          <mat-option value="option1">தமிழ்</mat-option>
+          <mat-option value="option1">हिन्दी</mat-option>
+          <mat-option value="option2">मराठी</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </section>
+  <div class="container" >
+    <!-- lang select section -->
+    <!-- login img and form section -->
+    <section class="row align-items-end justify-content-between">
+      <div class="col-lg-5 d-none d-lg-block">
+        <ng-content select=".main-left"></ng-content>
       </div>
-      <select class="form-select position-absolute" aria-label="Default select example">
-        <option selected>English</option>
-        <option value="1">தமிழ்</option>
-        <option value="2">हिन्दी</option>
-        <option value="3">मराठी</option>
-      </select>
-        <div class="row align-items-center">
-          <div class="col-lg-5 d-none d-lg-block mx-auto">
-            <ng-content select=".main-left"></ng-content>
-          </div>
-          <div class="col-lg-4 mx-auto right-col--bg">
-            <ng-content select=".main"></ng-content>
-          </div>
+      <div class="col-lg-5">
+        <div class="text-center mb-4">
+          <img class="logo" src="assets/images/logos/Kiya-Logo.svg" alt="Kiya-Logo">
         </div>
+        <ng-content select=".main"></ng-content>
       </div>
-    </main>
-    
+    </section>
+  </div>
+</main>
